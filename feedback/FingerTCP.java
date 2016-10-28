@@ -11,7 +11,7 @@ import java.io.InputStreamReader;
 /**
  * A complete client-side implementation of the finger protocol.
  * 
- * <p>Usage: java theFingerProtocol/FingerTCP &lt;hostname&gt; [&lt;port&gt;] 	
+ * <p>Usage: java theFingerProtocol/FingerTCP &lt;hostname&gt; [&lt;port&gt;] 
  * [&lt;query&gt;]
  * 
  * @author Joshua Sims
@@ -140,7 +140,6 @@ public class FingerTCP
             fromHost = new BufferedReader(new InputStreamReader(
             	socket.getInputStream()));
         }
-        
         // The IP address of the server could not be determined.
         catch (UnknownHostException e) 
         {
@@ -226,11 +225,10 @@ public class FingerTCP
     			// specified a query, so aborts the program.
     			else
     			{
-            		System.err.println("The specified port number, " +
-        				"\"" + args[INDEX_OF_PORT_NUM] + "\", " +
-        				"is invalid." +
-                		"\nYou must specify a port number between " +
-                		"0 and 65535." +
+            		System.err.println("The specified port number, \"" +
+            				args[INDEX_OF_PORT_NUM] + "\", is invalid." +
+                		"\nYou must specify a port number between 0 and " +
+                			"65535." +
                 		"\nAborting program...");
                 	System.exit(INVALID_PORT_NUMBER);
     			}
@@ -242,9 +240,9 @@ public class FingerTCP
     		
     		default:
         		System.err.println("An invalid number of arguments have " +
-        			"been passed." + 
-            		"\nUsage: java theFingerProtocol/FingerTCP " +
-            		"<hostname> [<port>] [<query>]" +
+        				"been passed." + 
+            		"\nUsage: java theFingerProtocol/FingerTCP <hostname> " + 
+        				"[<port>] [<query>]" +
             		"\nAborting program...");
         		System.exit(INVALID_NUM_OF_ARGS);
     	}
@@ -289,10 +287,10 @@ public class FingerTCP
     	if (portNum < PORT_NUM_LOWER_BOUND 
     		|| portNum > PORT_NUM_UPPER_BOUND)
     	{
-    		System.err.println("An invalid number of arguments have " +
-    			"been passed." + 
-        		"\nUsage: java theFingerProtocol/FingerTCP " +
-        		"<hostname> [<port>] [<query>]" +
+    		System.err.println("The specified port number, \"" +
+    				portNum + "\", is invalid." +
+        		"\nYou must specify a port number between 0 and " +
+        			"65535." +
         		"\nAborting program...");
     		System.exit(INVALID_PORT_NUMBER);
     	}

@@ -1,0 +1,22 @@
+Name: Josh S.
+
+------------------------------
+Finger:
+                                                                                                    
+	(10) style/OO:
+        Indention of multiple lines is incorrect -2
+
+	(11) CMD line args/ usage:
+
+	(15) TCP/Socket:
+
+	(9) Exceptions):
+
+	(15) Protocol:
+
+	(40) Functionality/Correctness:
+
+++++++++++++++++++++++++++++++++++++++++++++
+Total(100): 98 --> 89 Late 1 day
+
+Very well done, very readable and easy to follow your code!!
